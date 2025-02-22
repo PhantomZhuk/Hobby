@@ -1,1 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 @import "tailwindcss";
+
+@layer utilities {
+    @keyframes sway {
+        0% {
+            transform: rotate(2deg);
+        }
+
+        50% {
+            transform: rotate(-2deg);
+        }
+
+        100% {
+            transform: rotate(2deg);
+        }
+    }
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts//Gilroy-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilroyBold';
+    src: url('./fonts/Gilroy-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
