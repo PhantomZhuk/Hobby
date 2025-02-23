@@ -1,5 +1,6 @@
 import AboutUsScreen from "../../components/AboutUsScreen/AboutUsScreen";
 import Banner from "../../components/Banner/Banner";
+import DreamPlantScreen from "../../components/DreamPlantScreen/DreamPlantScreen";
 import HomeScreen from "../../components/HomeScreen/HomeScreen";
 
 
@@ -9,6 +10,7 @@ function Home() {
             <HomeScreen />
             <Banner />
             <AboutUsScreen />
+            <DreamPlantScreen />
         </div>
     );
 }
