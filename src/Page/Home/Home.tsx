@@ -1,6 +1,7 @@
 import AboutUsScreen from "../../components/AboutUsScreen/AboutUsScreen";
 import Banner from "../../components/Banner/Banner";
 import DreamPlantScreen from "../../components/DreamPlantScreen/DreamPlantScreen";
+import Footer from "../../components/Footer/Footer";
 import HomeScreen from "../../components/HomeScreen/HomeScreen";
 import SubscribeScreen from "../../components/SubscribeScreen/SubscribeScreen";
 
@@ -13,6 +14,7 @@ function Home() {
             <AboutUsScreen />
             <DreamPlantScreen />
             <SubscribeScreen />
+            <Footer />
         </div>
     );
 }

@@ -16,6 +16,34 @@
             transform: rotate(2deg);
         }
     }
+
+    @keyframes swayMiddle {
+        0% {
+            transform: rotate(3deg);
+        }
+
+        50% {
+            transform: rotate(-3deg);
+        }
+
+        100% {
+            transform: rotate(3deg);
+        }
+    }
+
+    @keyframes swayMax {
+        0% {
+            transform: rotate(5deg);
+        }
+
+        50% {
+            transform: rotate(-5deg);
+        }
+
+        100% {
+            transform: rotate(5deg);
+        }
+    }
 }
 
 @font-face {
