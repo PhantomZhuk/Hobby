@@ -1,6 +1,8 @@
+import { duration } from "../../Page/Home/Home";
+
 function Logo() {
     return (
-        <div className="flex items-center gap-2">
+        <div data-aos="fade-down-right" data-aos-duration={duration} className="flex items-center gap-2">
             <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.167 7.74209C17.2439 10.0902 16.2451 13.0141 16.3271 16.0951L16.3495 16.8429L14.9333 16.5064L13.8972 15.422C13.9345 13.6498 14.2774 11.9148 14.9258 10.2547C16.1557 7.08403 17.952 5.4239 19.1744 4.1975L19.6589 6.1717L19.167 7.74209Z" fill="#0CA941" />
                 <path d="M15.5669 8.82634C15.3433 9.26755 15.1271 9.74614 14.9259 10.2621C14.3669 11.7054 14.0315 13.201 13.9271 14.734C14.993 14.9509 15.8278 15.2649 16.3272 15.4818C16.3719 13.388 16.916 11.3764 17.9073 9.59658C17.0278 9.11799 16.1856 8.9086 15.5669 8.82634Z" fill="url(#paint0_linear_0_511)" />

@@ -1,15 +1,16 @@
 import ButtonBlock from "../../components/ButtonBlock/ButtonBlock";
+import { duration } from "../../Page/Home/Home";
 
 function Main() {
     return (
         <div className="w-full min-h-[80vh] flex">
             <div className="w-[50%] h-full flex flex-col pt-[150px] gap-5">
-                <h2 className="font-medium text-[72px] leading-[106%] capitalize text-[#374a3d] font-[Fredoka]">
+                <h2 data-aos="fade-down-right" data-aos-duration={duration} className="font-medium text-[72px] leading-[106%] capitalize text-[#374a3d] font-[Fredoka]">
                     Make a <span className="text-[#0ca941]">Beautiful Garden</span> with Your own Hand
                 </h2>
-                <p className="font-medium text-[18px] leading-[178%] text-[#707070]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
-                <ButtonBlock text="Shop Now" />
-                <svg className="absolute left-[45%] top-[60%] transform -translate-x-1/2" width="291" height="344" viewBox="0 0 291 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <p data-aos="fade-right" data-aos-duration={duration} className="font-medium text-[18px] leading-[178%] text-[#707070]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
+                <ButtonBlock aos="fade-up-right" text="Shop Now" />
+                <svg data-aos="fade-up" data-aos-duration={duration} className="absolute left-[45%] top-[60%] transform -translate-x-1/2" width="291" height="344" viewBox="0 0 291 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_0_331)">
                         <rect x="39" y="61" width="168.875" height="187.662" rx="35" fill="white" />
                     </g>
@@ -160,7 +161,7 @@ function Main() {
                 </svg>
             </div>
             <div className="w-[50%] h-full">
-                <svg width="699" height="766" viewBox="0 0 699 766" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg data-aos="fade-left" data-aos-duration={duration} width="699" height="766" viewBox="0 0 699 766" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M356.44 631.005C381.202 618.663 410.19 594.755 453.835 566.336C503.13 534.196 616.268 588.039 679.96 443.018C686.651 427.786 691.322 411.174 693.585 395.432C729.923 141.538 437.847 -9.89457 201.701 91.473C100.008 135.126 -33.4176 225.784 11.2415 437.351C42.0603 583.407 190.367 713.844 356.44 631.005Z" fill="white" />
                     <path d="M288.969 401.36L368.435 386.301C368.435 386.301 380.679 378.343 424.881 415.318C452.37 438.275 420.902 458.091 480.593 462.866C567.895 469.845 717.237 565.287 633.715 715.528C587.432 798.784 562.646 693.459 501.041 708.733C489.287 712.896 481.573 715.528 480.593 715.528C475.573 715.528 286.398 594.501 286.398 594.501L288.969 401.36Z" fill="#1E1735" />
                     <path d="M63.0006 727.035C74.0817 704.201 86.2647 675.001 97.8356 634.107C108.917 594.806 157.772 598.969 204.484 577.42C251.257 555.872 299.622 543.383 345.906 572.461C401.74 607.478 458.859 613.477 487.572 652.35C491.552 657.799 496.327 667.838 497.429 669.981C502.51 680.082 510.044 710.019 513.288 722.079C497.309 731.445 479.307 720.24 467.308 725.26C334.58 780.907 186.24 776.254 63.0006 727.035Z" fill="#FFBCB0" />

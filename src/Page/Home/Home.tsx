@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import HomeScreen from "../../components/HomeScreen/HomeScreen";
 import SubscribeScreen from "../../components/SubscribeScreen/SubscribeScreen";
 
+export const duration: number = 1000
 
 function Home() {
     return (

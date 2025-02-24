@@ -1,8 +1,9 @@
 import React from 'react';
+import { duration } from '../../Page/Home/Home';
 
-function DreamPlantCart({ key, img, name, price, numberReviews }: { key: number, img: string, name: string, price: number, numberReviews: number }) {
+function DreamPlantCart({ key, img, name, price, numberReviews, aos }: { key: number, img: string, name: string, price: number, numberReviews: number, aos: string }) {
     return (
-        <div id={`cart${key}`} className='w-[360px] h-[450px] border border-[0.5px] border-[rgba(0, 0, 0, 0.36)] rounded-[37px] flex flex-col gap-5 items-center p-[40px]'>
+        <div data-aos={`${aos}`} data-aos-duration={duration} id={`cart${key}`} className='w-[360px] h-[450px] border border-[0.5px] border-[rgba(0, 0, 0, 0.36)] rounded-[37px] flex flex-col gap-5 items-center p-[40px]'>
             <img src={img} alt={name} className='max-h-[232px]' />
             <div className='w-full flex flex-col gap-1'>
                 <h2 className='font-[Fredoka] font-[600] text-[24px] leading-[125%] text-[#374a3d] w-full'>{name}</h2>

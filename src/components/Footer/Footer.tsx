@@ -1,6 +1,7 @@
 import FlowerSVG from "../../assets/flowerSVG.svg";
 import FlowerSVG2 from "../../assets/flowerSVG2.svg";
 import FlowerSVG3 from "../../assets/flowerSVG3.svg";
+import { duration } from "../../Page/Home/Home";
 import Logo from "../Logo/Logo";
 
 interface list {
@@ -68,8 +69,8 @@ function Footer() {
             <div className="w-full h-[45vh] flex justify-between">
                 <div className="flex flex-col w-[25%] h-full gap-7">
                     <Logo />
-                    <p className="font-[Gilroy] font-medium text-[18px] leading-[178%] text-[#678570]">There are many variations of pass is ages of Lorem  available, but the majority have suffered alteration in  injected humour.</p>
-                    <div className="flex gap-5 items-center">
+                    <p data-aos="fade-right" data-aos-duration={duration} className="font-[Gilroy] font-medium text-[18px] leading-[178%] text-[#678570]">There are many variations of pass is ages of Lorem  available, but the majority have suffered alteration in  injected humour.</p>
+                    <div data-aos="fade-up-right" data-aos-duration={duration} className="flex gap-5 items-center">
                         <svg className="cursor-pointer" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect y="0.380859" width="41" height="39" rx="8" fill="#0CA941" />
                             <path d="M24.2792 21.6302L24.8498 18.0109H21.2831V15.6621C21.2831 14.6721 21.7811 13.7065 23.3787 13.7065H25V10.6252C25 10.6252 23.5289 10.3809 22.122 10.3809C19.1849 10.3809 17.2651 12.1146 17.2651 15.2527V18.0115H14V21.6309H17.2651V30.3809H21.2831V21.6309L24.2792 21.6302Z" fill="white" />
@@ -86,7 +87,7 @@ function Footer() {
                         </svg>
                     </div>
                 </div>
-                <div className="w-[20%] h-full flex flex-col gap-5">
+                <div data-aos="fade-up" data-aos-duration={duration} className="w-[20%] h-full flex flex-col gap-5">
                     <h2 className="font-[GilroyBold] font-[700] text-[22px] leading-[145%] text-[#374a3d]">Company</h2>
                     <ul className="flex flex-col gap-2">
                         {Company.map((item) => (
@@ -94,7 +95,7 @@ function Footer() {
                         ))}
                     </ul>
                 </div>
-                <div className="w-[20%] h-full flex flex-col gap-5">
+                <div data-aos="fade-up" data-aos-duration={duration} className="w-[20%] h-full flex flex-col gap-5">
                     <h2 className="font-[GilroyBold] font-[700] text-[22px] leading-[145%] text-[#374a3d]">Support</h2>
                     <ul className="flex flex-col gap-2">
                         {Support.map((item) => (
@@ -102,7 +103,7 @@ function Footer() {
                         ))}
                     </ul>
                 </div>
-                <div className="w-[20%] h-full flex flex-col gap-2.5">
+                <div data-aos="fade-up-left" data-aos-duration={duration} className="w-[20%] h-full flex flex-col gap-2.5">
                     <h2 className="font-[GilroyBold] font-[700] text-[22px] leading-[145%] text-[#374a3d]">Contact</h2>
                     <p className="font-[Gilroy] font-normal text-[18px] leading-[150%]">Mirabazar-Subhanighat Rd, Sylhet-Bangladesh</p>
                     <h2 className="font-[GilroyBold] font-[700] text-[22px] leading-[145%] text-[#374a3d]">Email Us</h2>
@@ -117,9 +118,9 @@ function Footer() {
                 <hr className="bg-[#bf7949] h-[2px]" />
                 <div className="w-full flex justify-between align-start relative mt-[-10px]">
                     <img src={FlowerSVG} className="h-[338px] duration-300 animate-[sway_4s_linear_infinite] origin-top" />
-                    <img src={FlowerSVG2} className="h-[250px] duration-300 animate-[swayMiddle_4s_linear_infinite] origin-top" />
-                    <img src={FlowerSVG3} className="h-[269px] duration-300 animate-[swayMax_4s_linear_infinite] origin-top" />
-                    <img src={FlowerSVG2} className="h-[250px] duration-300 animate-[swayMiddle_4s_linear_infinite] origin-top" />
+                    <img src={FlowerSVG2} className="h-[250px] duration-300 animate-[sway_4s_linear_infinite] origin-top" />
+                    <img src={FlowerSVG3} className="h-[269px] duration-300 animate-[sway_4s_linear_infinite] origin-top" />
+                    <img src={FlowerSVG2} className="h-[250px] duration-300 animate-[sway_4s_linear_infinite] origin-top" />
                     <img src={FlowerSVG} className="h-[338px] duration-300 animate-[sway_4s_linear_infinite] origin-top" />
                 </div>
             </div>

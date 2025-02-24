@@ -1,5 +1,6 @@
 import Logo from "../../components/Logo/Logo";
 import Nav from "../../components/Nav/Nav";
+import { duration } from "../../Page/Home/Home";
 import AuthButton from "../AuthButton/AuthButton";
 import CartContainer from "../CartContainer/CartContainer";
 
@@ -68,7 +69,7 @@ function Header() {
                 <path d="M82.5536 147.22C81.5513 143.211 79.2127 139.647 77.2082 136.084C75.4265 132.966 75.3151 129.291 75.3151 125.727C75.3151 121.495 75.6492 117.264 76.0946 113.032C76.7628 106.462 78.0991 99.0003 72.9765 93.7663C67.0743 87.7528 57.2745 91.3164 52.4859 96.8844C49.0337 100.893 45.5815 108.132 44.0225 113.811H45.5815C46.9179 109.468 49.3678 104.012 51.4837 100.782C53.3768 97.7753 56.0495 94.9913 59.3904 93.5436C63.1767 91.8732 67.9652 91.5391 71.3061 94.3231C76.7628 98.7776 75.3151 106.462 74.7583 112.586C74.3128 116.484 73.9788 120.382 73.9788 124.391C73.8674 127.732 73.8674 131.295 74.8696 134.636C75.9833 138.311 78.7673 141.54 80.215 145.104C82.4422 150.561 81.9968 156.129 79.4355 161.474C78.99 162.365 80.3264 163.033 80.7718 162.254C82.8877 157.242 83.8899 152.231 82.5536 147.22Z" fill="#72A265" />
             </svg>
             <Logo />
-            <div className="flex items-center gap-5">
+            <div data-aos="fade-down-left" data-aos-duration={duration} className="flex items-center gap-5">
                 <Nav />
                 <CartContainer />
                 <AuthButton />

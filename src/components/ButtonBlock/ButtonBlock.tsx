@@ -1,6 +1,8 @@
+import { duration } from "../../Page/Home/Home";
+
 function ButtonBlock(prop: any) {
     return (
-        <div className="flex items-center gap-10">
+        <div data-aos={`${prop.aos}`} data-aos-duration={duration} className="flex items-center gap-10">
             <button className="w-[179px] h-[67px] flex items-center justify-center gap-2 rounded-[100%] border-2 border-[#0ca941] cursor-pointer">
                 {prop.text}
                 <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
