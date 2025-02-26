@@ -935,6 +935,18 @@
     lightningcss "^1.29.1"
     tailwindcss "4.0.7"
 
+"@tanstack/query-core@5.66.4":
+  version "5.66.4"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.66.4.tgz#44b87bff289466adbfa0de8daa5756cbd2d61c61"
+  integrity sha512-skM/gzNX4shPkqmdTCSoHtJAPMTtmIJNS0hE+xwTTUVYwezArCT34NMermABmBVUg5Ls5aiUXEDXfqwR1oVkcA==
+
+"@tanstack/react-query@^5.66.9":
+  version "5.66.9"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.66.9.tgz#1c8be303adae59e9cee877490fbb2c23dfa26927"
+  integrity sha512-NRI02PHJsP5y2gAuWKP+awamTIBFBSKMnO6UVzi03GTclmHHHInH5UzVgzi5tpu4+FmGfsdT7Umqegobtsp23A==
+  dependencies:
+    "@tanstack/query-core" "5.66.4"
+
 "@tanstack/react-virtual@^3.8.1":
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.13.0.tgz#f50bccdfbb792cb11fdc0342fd3ec6945c730389"
@@ -2143,3 +2155,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zustand@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-5.0.3.tgz#b323435b73d06b2512e93c77239634374b0e407f"
+  integrity sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg==

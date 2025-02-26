@@ -1,9 +1,19 @@
 import React from 'react';
 import { duration } from '../../Page/Home/Home';
 
-function DreamPlantCart({ key, img, name, price, numberReviews, aos }: { key: number, img: string, name: string, price: number, numberReviews: number, aos: string }) {
+interface DreamPlantCartProps {
+    id: number;
+    img: string;
+    name: string;
+    price: number;
+    numberReviews: number;
+    aos: string;
+    onclick: () => void;
+}
+
+const DreamPlantCart: React.FC<DreamPlantCartProps> = ({ id, img, name, price, numberReviews, aos, onclick }) => {
     return (
-        <div data-aos={`${aos}`} data-aos-duration={duration} id={`cart${key}`} className='w-[360px] h-[450px] border border-[0.5px] border-[rgba(0, 0, 0, 0.36)] rounded-[37px] flex flex-col gap-5 items-center p-[40px]'>
+        <div data-aos={`${aos}`} data-aos-duration={duration} id={`cart${id}`} className='w-[360px] h-[450px] border border-[0.5px] border-[rgba(0, 0, 0, 0.36)] rounded-[37px] flex flex-col gap-5 items-center p-[40px]'>
             <img src={img} alt={name} className='max-h-[232px]' />
             <div className='w-full flex flex-col gap-1'>
                 <h2 className='font-[Fredoka] font-[600] text-[24px] leading-[125%] text-[#374a3d] w-full'>{name}</h2>
@@ -23,7 +33,7 @@ function DreamPlantCart({ key, img, name, price, numberReviews, aos }: { key: nu
                     <p className='font-[Gilroy] font-[600] text-[12px] leading-[100%] text-[#678570]'>Price</p>
                     <p className='font-[Fredoka] font-bold text-[20px] leading-[150%] text-[#0ca941]'>$ {price}</p>
                 </div>
-                <button className='w-[128px] h-[43px] rounded-[10px] border border-[0.5px] border-[rgba(55,74,61,0.36)] bg-[fff] cursor-pointer'>Add To Cart</button>
+                <button onClick={onclick} className='w-[128px] h-[43px] rounded-[10px] border border-[0.5px] border-[rgba(55,74,61,0.36)] bg-[fff] cursor-pointer'>Add To Cart</button>
             </div>
         </div>
     );

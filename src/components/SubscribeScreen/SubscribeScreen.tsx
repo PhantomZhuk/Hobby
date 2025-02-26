@@ -1,6 +1,35 @@
+import { QueryClient, useMutation } from "@tanstack/react-query";
 import { duration } from "../../Page/Home/Home";
 
+
+const queryClient = new QueryClient();
+
 function SubscribeScreen() {
+    const mutation = useMutation({
+        mutationFn: (email: { email: string }) => {
+            return fetch('http://localhost:5000/subscribe', {
+                method: 'POST',
+                body: JSON.stringify(email),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            });
+        },
+        onSuccess: () => {
+            queryClient.invalidateQueries({
+                queryKey: ['products'],
+                exact: true,
+            });
+        },
+    });
+
+    function sendEmail() {
+        const email = document.getElementById('SubscribeEmail') as HTMLInputElement;
+        if (!email) return;
+        mutation.mutate({ email: email.value });
+        email.value = '';
+    }
+
     return (
         <div className="w-full min-h-[80vh] flex items-center justify-between">
             <div className="w-[400px] h-[400px] absolute right-[50px] mt-[-300px] bg-[#53C351] blur-[150px] rounded-full z-[-1]"></div>
@@ -9,8 +38,8 @@ function SubscribeScreen() {
                 <h2 className="font-[Fredoka] font-[600] text-[36px] leading-[167%] text-[#374a3d]">Ready to bring idea for your garden?</h2>
                 <p className="font-[Gilroy] font-[600] text-[18px] leading-[178%] text-[#678570] text-center">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete</p>
                 <div className="w-full flex items-center justify-between">
-                    <input type="email" placeholder="Enter your email" className="border border-[#0ca941] rounded-[10px] w-[491px] h-[81px] font-[Gilroy] font-[600] text-[18px] leading-[178%] text-[#333] pl-[35px] outline-none"/>
-                    <button className="relative ml-[-100px] cursor-pointer rounded-[10px] w-[223px] h-[81px] bg-[#0ca941] font-[Gilroy] font-[600] text-[18px] leading-[178%] text-[#fff]">Subscribe</button>
+                    <input type="email" placeholder="Enter your email" className="border border-[#0ca941] rounded-[10px] w-[491px] h-[81px] font-[Gilroy] font-[600] text-[18px] leading-[178%] text-[#333] pl-[35px] outline-none" id="SubscribeEmail" />
+                    <button className="relative ml-[-100px] cursor-pointer rounded-[10px] w-[223px] h-[81px] bg-[#0ca941] font-[Gilroy] font-[600] text-[18px] leading-[178%] text-[#fff]" onClick={sendEmail}>Subscribe</button>
                 </div>
             </div>
         </div>
