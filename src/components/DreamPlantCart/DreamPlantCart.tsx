@@ -33,7 +33,9 @@ const DreamPlantCart: React.FC<DreamPlantCartProps> = ({ id, img, name, price, n
                     <p className='font-[Gilroy] font-[600] text-[12px] leading-[100%] text-[#678570]'>Price</p>
                     <p className='font-[Fredoka] font-bold text-[20px] leading-[150%] text-[#0ca941]'>$ {price}</p>
                 </div>
-                <button onClick={onclick} className='w-[128px] h-[43px] rounded-[10px] border border-[0.5px] border-[rgba(55,74,61,0.36)] bg-[fff] cursor-pointer'>Add To Cart</button>
+                <button onClick={
+                    onclick
+                } className='w-[128px] h-[43px] rounded-[10px] border border-[0.5px] border-[rgba(55,74,61,0.36)] bg-[fff] cursor-pointer'>Add To Cart</button>
             </div>
         </div>
     );

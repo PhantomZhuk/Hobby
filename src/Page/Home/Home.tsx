@@ -4,6 +4,7 @@ import BuyProductsContainer from "../../components/BuyProductsContainer/BuyProdu
 import DreamPlantScreen from "../../components/DreamPlantScreen/DreamPlantScreen";
 import Footer from "../../components/Footer/Footer";
 import HomeScreen from "../../components/HomeScreen/HomeScreen";
+import NotificationDialog from "../../components/NotificationDialog/NotificationDialog";
 import SubscribeScreen from "../../components/SubscribeScreen/SubscribeScreen";
 
 export const duration: number = 1000
@@ -11,6 +12,7 @@ export const duration: number = 1000
 function Home() {
     return (
         <div className="w-full min-h-screen flex flex-col px-[215px]">
+            <NotificationDialog />
             <BuyProductsContainer />
             <HomeScreen />
             <Banner />
