@@ -1,20 +1,17 @@
-import { QueryClient, useMutation } from "@tanstack/react-query";
 import { duration } from "../../Page/Home/Home";
-
-
-const queryClient = new QueryClient();
+import { QueryClient, useMutation } from "@tanstack/react-query";
+import axios from "axios";
 
 function SubscribeScreen() {
+
+    const queryClient = new QueryClient();
+
+    function PostSendEmail({ email }: { email: string }) {
+        return axios.post('http://localhost:5000/subscribe', { email });
+    }
+
     const mutation = useMutation({
-        mutationFn: (email: { email: string }) => {
-            return fetch('http://localhost:5000/subscribe', {
-                method: 'POST',
-                body: JSON.stringify(email),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            });
-        },
+        mutationFn: PostSendEmail,
         onSuccess: () => {
             queryClient.invalidateQueries({
                 queryKey: ['products'],

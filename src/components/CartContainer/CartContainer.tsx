@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Button, Dialog, DialogPanel } from '@headlessui/react'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faCartShopping, faTrashCan, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
@@ -13,31 +13,23 @@ export default function CartContainer() {
     const decreaseQuantity = useStore((state) => state.decreaseQuantity)
     const { openDialog } = useDialogStore();
 
-    function open() {
-        setIsOpen(true)
-    }
-
-    function close() {
-        setIsOpen(false)
-    }
-
     function openDialogContainer() {
         if (cardProducts.length > 0) {
             openDialog();
-            close();
+            setIsOpen(false);
         }
     }
 
     return (
         <>
             <Button
-                onClick={open}
+                onClick={() => setIsOpen(true)}
                 className="rounded-md bg-[#d4a000] cursor-pointer h-[41px] px-4 text-sm font-medium text-white focus:outline-none data-[hover]:bg-[#ecc742]"
             >
                 <FontAwesomeIcon icon={faCartShopping} />
             </Button>
 
-            <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close} __demoMode>
+            <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={() => setIsOpen(false)} __demoMode>
                 <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                     <div className="flex min-h-full items-center justify-end">
                         <DialogPanel
@@ -47,7 +39,7 @@ export default function CartContainer() {
                             <div className='w-full flex'>
                                 <Button
                                     className="text-white text-[26px] font-[600] cursor-pointer"
-                                    onClick={close}
+                                    onClick={() => setIsOpen(false)}
                                 >
                                     <FontAwesomeIcon icon={faXmark} />
                                 </Button>
