@@ -1,11 +1,10 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "../Page/Home/Home";
-import AuthPage from "../Page/Auth/Auth";
-import NotFoundPage from "../Page/NotFound/NotFound";
-import UserPage from "../Page/UserProfile/UserProfile";
+import HomePage from "../Page/Home";
+import AuthPage from "../Page/Auth";
+import NotFoundPage from "../Page/NotFound";
+import UserPage from "../Page/UserProfile";
 import AuthGuard from "../guards/auth.guard";
 import AdminGuard from "../guards/admin.guard";
-import AdminPage from "../Page/Admin/Admin";
 
 const AppRoutes = () => {
     return (
@@ -15,9 +14,8 @@ const AppRoutes = () => {
                 <Route path="/home" element={<HomePage />} />
                 <Route path="/auth" element={<AuthPage />} />
                 <Route path="/profile" element={<UserPage />} />
-            </Route>
-            <Route element={<AdminGuard/>}>
-                <Route path="/admin" element={<AdminPage />} />
+                    <Route path="/admin" element={<Navigate to="/admin/users" />} />
+                    <Route path="/admin/:id" element={<AdminGuard />} />
             </Route>
             <Route path="*" element={<NotFoundPage />} />
         </Routes>
