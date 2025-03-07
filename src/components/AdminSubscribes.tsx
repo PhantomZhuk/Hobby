@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
 import { getSubscribes } from '../services/SubscribesService';
+
 
 function AdminSubscribes() {
     const { data, isLoading, error } = useQuery({

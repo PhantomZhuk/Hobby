@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useStore } from '../store/store';
-import { getDreamPlants } from '../services/DreamPlantService';
+import { getDreamPlants } from '../services/dreamPlantService';
 import DreamPlantCart from './DreamPlantCart';
 
 function DreamPlantCartContainer() {

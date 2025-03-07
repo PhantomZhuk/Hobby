@@ -4,9 +4,8 @@ import { Button, Dialog, DialogPanel } from '@headlessui/react'
 import { QueryClient, useMutation } from '@tanstack/react-query';
 import { useDialogStore } from '../store/dialogStore';
 import { useStore } from '../store/store';
-import { createOrder } from '../services/OrderService';
 import { getTotalPrice } from '../utils/getTotalPrice';
-
+import { createOrder } from '../services/OrderService';
 
 const queryClient = new QueryClient();
 

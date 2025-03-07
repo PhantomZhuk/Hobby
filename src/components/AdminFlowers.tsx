@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getDreamPlants } from '../services/DreamPlantService';
+import { getDreamPlants } from '../services/dreamPlantService';
 
 function AdminFlowers() {
     const { data, isLoading, error } = useQuery({
