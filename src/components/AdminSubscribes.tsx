@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getSubscribes } from '../services/SubscribesService';
+import { getSubscribes } from '../services/subscribesService';
 
 
 function AdminSubscribes() {

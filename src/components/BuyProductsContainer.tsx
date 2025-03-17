@@ -5,7 +5,7 @@ import { QueryClient, useMutation } from '@tanstack/react-query';
 import { useDialogStore } from '../store/dialogStore';
 import { useStore } from '../store/store';
 import { getTotalPrice } from '../utils/getTotalPrice';
-import { createOrder } from '../services/OrderService';
+import { createOrder } from '../services/orderService';
 
 const queryClient = new QueryClient();
 

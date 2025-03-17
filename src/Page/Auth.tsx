@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { duration } from "./Home";
 import { QueryClient, useMutation } from "@tanstack/react-query";
-import { Login, Register } from "../services/AuthService";
+import { Login, Register } from "../services/authService";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 
